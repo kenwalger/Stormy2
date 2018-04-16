@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Stormy</string>
+    <string name="network_unavailable_message">Sorry, the network is unavailable.</string>
 </resources>
