@@ -47,9 +47,13 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onResponse(Call call, Response response) throws IOException {
         try {
+          Log.v(TAG, response.body().string());
 
           if (response.isSuccessful()) {
-            Log.v(TAG, response.body().string());
+            
+          }
+          else {
+            alertUserAboutError();
           }
         } catch (IOException e) {
           Log.e(TAG, "IO Exception caught: ", e);
@@ -58,5 +62,8 @@ public class MainActivity extends AppCompatActivity {
     });
 
     Log.d(TAG, "Main UI code is running. hooray!");
+  }
+
+  private void alertUserAboutError() {
   }
 }
