@@ -11,5 +11,11 @@ public class AlertDialogFragment extends DialogFragment {
   public Dialog onCreateDialog(Bundle savedInstanceState) {
     Context context = getActivity();
     AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+    builder.setTitle("Oops! Sorry")
+        .setMessage("There was an error. Please try again")
+        .setPositiveButton("OK", null);
+
+    return builder.create();
   }
 }
